@@ -1,0 +1,24 @@
+# Template file for 'dehydrated'
+pkgname=dehydrated
+version=0.4.0
+revision=1
+wrksrc="${pkgname}-${version}"
+noarch=yes
+conf_files="
+	/etc/dehydrated/config
+	/etc/dehydrated/domains.txt
+	/etc/dehydrated/hook.sh"
+make_dirs="/var/www/dehydrated 0755 root root"
+depends="libressl curl"
+short_desc="client for signing certificates with an ACME-server implemented in bash"
+maintainer="johannes <johannes.brechtmann@gmail.com>"
+license="MIT"
+homepage="https://dehydrated.de"
+distfiles="https://github.com/lukas2511/dehydrated/archive/v${version}.tar.gz"
+checksum=611da321330ffd43d1dc497990b486b2dec12c59149803ad7d156980c8527f48
+
+do_install() {
+	vbin dehydrated
+	vmkdir etc/${pkgname}
+	vcopy docs/examples/* etc/${pkgname}
+}
