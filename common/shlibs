@@ -3349,3 +3349,6 @@ libkid3-gui.so.3.6.0 kid3-3.6.0_1
 libcfitsio.so.3 cfitsio-3.450_1
 libapparmor.so.1 libapparmor-2.12.0_1
 libcue.so.2 libcue-2.2.0_1
+libwoff2common.so.1.0.2 woff2-1.0.2_1
+libwoff2enc.so.1.0.2 woff2-1.0.2_1
+libwoff2dec.so.1.0.2 woff2-1.0.2_1

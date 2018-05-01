@@ -1,0 +1,26 @@
+# Template file for 'woff2'
+pkgname=woff2
+version=1.0.2
+revision=1
+build_style=cmake
+makedepends="brotli-devel"
+short_desc="Web Open Font Format 2 reference implementation"
+maintainer="johannes <johannes.brechtmann@gmail.com>"
+license="MIT"
+homepage="https://github.com/google/woff2"
+distfiles="https://github.com/google/woff2/archive/v${version}.tar.gz"
+checksum=add272bb09e6384a4833ffca4896350fdb16e0ca22df68c0384773c67a175594
+
+post_install() {
+	vlicense LICENSE
+}
+
+woff2-devel_package() {
+	short-desc+=" - development files"
+	depends="${sourcepkg}>=${version}_${revision}"
+	pkg_install() {
+		vmove usr/include
+		vmove "usr/lib/*.so"
+		vmove usr/lib/pkgconfig
+	}
+}

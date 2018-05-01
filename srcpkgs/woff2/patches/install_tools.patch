@@ -1,0 +1,20 @@
+--- CMakeLists.txt.orig 2018-05-01 15:30:30.721701011 +0200
++++ CMakeLists.txt      2018-05-01 15:30:52.116700628 +0200
+@@ -260,12 +260,10 @@
+   LIBRARIES woff2enc)
+
+ # Installation
+-if (NOT BUILD_SHARED_LIBS)
+-  install(
+-    TARGETS woff2_decompress woff2_compress woff2_info
+-    RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
+-  )
+-endif()
++install(
++  TARGETS woff2_decompress woff2_compress woff2_info
++  RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
++)
+
+ install(
+   TARGETS woff2common woff2dec woff2enc
+
