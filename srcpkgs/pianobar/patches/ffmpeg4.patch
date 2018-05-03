@@ -1,0 +1,21 @@
+--- src/player.c.orig   2018-05-03 21:42:58.981211563 +0200
++++ src/player.c        2018-05-03 21:43:11.539100158 +0200
+@@ -36,7 +36,6 @@
+ #include <libavcodec/avcodec.h>
+ #include <libavutil/avutil.h>
+ #include <libavfilter/avfilter.h>
+-#include <libavfilter/avfiltergraph.h>
+ #include <libavfilter/buffersink.h>
+ #include <libavfilter/buffersrc.h>
+ #ifdef HAVE_LIBAVFILTER_AVCODEC_H
+--- src/player.h.orig   2018-05-03 21:43:04.829159684 +0200
++++ src/player.h        2018-05-03 21:43:19.771027609 +0200
+@@ -34,7 +34,6 @@
+ #include <ao/ao.h>
+ #include <libavformat/avformat.h>
+ #include <libavfilter/avfilter.h>
+-#include <libavfilter/avfiltergraph.h>
+ #include <piano.h>
+
+ #include "settings.h"
+
