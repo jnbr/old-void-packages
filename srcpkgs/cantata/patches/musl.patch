@@ -9,3 +9,23 @@
  #include "udisksdeviceinterface.h"
  
 
+--- gui/main.cpp.orig	2018-05-09 12:51:28.874497821 +0200
++++ gui/main.cpp	2018-05-09 12:51:51.753276463 +0200
+@@ -260,7 +260,7 @@
+     qInstallMessageHandler(cantataQtMsgHandler);
+ }
+ 
+-#if defined Q_OS_LINUX && defined __GNUC__
++#if defined Q_OS_LINUX && defined __GLIBC__
+ #include <execinfo.h>
+ #include <unistd.h>
+ #include <signal.h>
+@@ -340,7 +340,7 @@
+ 
+ int main(int argc, char *argv[])
+ {
+-    #if defined Q_OS_LINUX && defined __GNUC__
++    #if defined Q_OS_LINUX && defined __GLIBC__
+     signal(SIGSEGV, sigHandler);
+     #endif
+     QThread::currentThread()->setObjectName("GUI");

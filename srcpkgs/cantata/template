@@ -1,6 +1,6 @@
 # Template file for 'cantata'
 pkgname=cantata
-version=2.2.0
+version=2.3.0
 revision=1
 build_style=cmake
 hostmakedepends="pkg-config qt5-qmake qt5-host-tools qt5-tools"
@@ -16,4 +16,4 @@ maintainer="LockeAnarchist <emanuel@openmailbox.org>"
 license="GPL-3"
 homepage="https://github.com/cdrummond/cantata"
 distfiles="https://github.com/CDrummond/cantata/releases/download/v${version}/${pkgname}-${version}.tar.bz2"
-checksum=c84691eb17711118d3c512d70cb422267f7a137290082cdd1ff0a871b4a8e5c0
+checksum=15a4496cdacbb6d22880dcca3011bd0d7738fc07b03e34aa745d1533c7f33db7
