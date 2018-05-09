@@ -1,9 +1,10 @@
 # Template file for 'ssr'
 pkgname=ssr
 version=0.3.11
-revision=1
+revision=2
 build_style=cmake
 configure_args="-DWITH_QT5=ON"
+patch_args="-Np1"
 hostmakedepends="pkg-config"
 makedepends="alsa-lib-devel ffmpeg-devel glu-devel jack-devel pulseaudio-devel
  qt5-tools-devel qt5-x11extras-devel"
